@@ -62,5 +62,6 @@ def test_run_experiment_b_suite_reports_uniformity_statistic():
 
     assert len(result["cases"]) == 2
     assert len(result["p_values_h0b"]) == 2
+    assert result["seed"] == 5
     assert 0.0 <= result["ks_statistic_h0b_uniformity"] <= 1.0
     assert 0.0 <= result["ks_pvalue_h0b_uniformity"] <= 1.0

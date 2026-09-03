@@ -39,7 +39,7 @@ def run_experiment_b_single(
 ) -> dict[str, Any]:
     """Run Experiment B for one semiprime with H0a and H0b."""
     if rng is None:
-        rng = np.random.default_rng(42)
+        rng = np.random.default_rng()
 
     N = int(p_true) * int(q_true)
     sqrt_N = np.sqrt(N)
@@ -139,6 +139,7 @@ def run_experiment_b_suite(
 
     ks_stat, ks_pvalue = _ks_uniform_statistic(p_values)
     return {
+        "seed": seed,
         "cases": case_results,
         "p_values_h0b": p_values,
         "ks_statistic_h0b_uniformity": ks_stat,
