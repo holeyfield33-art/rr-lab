@@ -1,0 +1,15 @@
+[experiment]
+name = "Experiment_B_Factor_Selectivity"
+M_samples = 5000
+seed = 42
+
+[benchmark_semiprimes]
+targets = [
+    { p = 10007, q = 10009, N = 100160063 },
+    { p = 20011, q = 20021, N = 400640231 },
+    { p = 40009, q = 40013, N = 1600880117 },
+]
+
+[operator]
+truncation_cutoff = 10000
+window_function = "gaussian_damped"
