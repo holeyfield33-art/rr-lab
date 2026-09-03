@@ -12,10 +12,13 @@ def generate_orbit(N: int, base: int, K: int) -> np.ndarray:
     if K < 1:
         raise ValueError("K must be positive.")
 
-    orbit = np.empty(K, dtype=np.int64)
-    orbit[0] = 1 % N
+    orbit = np.empty(K, dtype=object)
+    current = 1 % N
+    base_mod = base % N
+    orbit[0] = current
     for index in range(1, K):
-        orbit[index] = (orbit[index - 1] * base) % N
+        current = (current * base_mod) % N
+        orbit[index] = current
     return orbit
 
 
