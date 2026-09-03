@@ -1,0 +1,17 @@
+[experiment]
+name = "experiment_b_factor_selectivity"
+
+a1_status = "hypothesis_unverified"
+benchmark_semiprime = 100160063
+benchmark_factors = [10007, 10009]
+
+m_samples = 5000
+random_seed = 42
+
+[hypotheses]
+h0a = "S_factors equals random continuous log-coordinate pairs in I_N"
+h0b = "S_factors equals random prime pairs in I_N"
+
+[gates]
+no_n_selectivity_if_p_hat_ge = 0.01
+strict_audit_trigger_if_p_hat_lt = 0.001
