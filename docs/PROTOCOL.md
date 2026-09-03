@@ -12,4 +12,4 @@ Current Experiment B status:
 - Bpos known-divisibility positive control: available as calibration only.
 - Borbit modular-order observable: available as a standalone benchmark.
 - B1 zeta plus N factor-selective operator: undefined; no mapping from modular
-	frequency to `log(p)` is used.
+frequency to `log(p)` is used.
