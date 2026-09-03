@@ -1,1 +1,3 @@
-"""Tools for testing spectral resonance hypotheses."""
+"""resonance_lab package."""
+
+__all__ = ["circularity", "operators"]

@@ -1,1 +1,1 @@
-"""Experiment implementations."""
+"""Experiment modules."""

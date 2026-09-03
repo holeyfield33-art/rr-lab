@@ -1,15 +1,17 @@
 [experiment]
-name = "Experiment_B_Factor_Selectivity"
-M_samples = 5000
-seed = 42
+name = "experiment_b_factor_selectivity"
 
-[benchmark_semiprimes]
-targets = [
-    { p = 10007, q = 10009, N = 100160063 },
-    { p = 20011, q = 20021, N = 400640231 },
-    { p = 40009, q = 40013, N = 1600880117 },
-]
+a1_status = "hypothesis_unverified"
+benchmark_semiprime = 100160063
+benchmark_factors = [10007, 10009]
 
-[operator]
-truncation_cutoff = 10000
-window_function = "gaussian_damped"
+m_samples = 5000
+random_seed = 42
+
+[hypotheses]
+h0a = "S_factors equals random continuous log-coordinate pairs in I_N"
+h0b = "S_factors equals random prime pairs in I_N"
+
+[gates]
+no_n_selectivity_if_p_hat_ge = 0.01
+strict_audit_trigger_if_p_hat_lt = 0.001
